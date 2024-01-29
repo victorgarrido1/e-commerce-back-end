@@ -1,5 +1,7 @@
 const express = require('express');
-const routes = require('./routes');
+const routes = require('./routes/index');
+
+const sequelize = require('./config/connection');
 // import sequelize connection
 
 const app = express();
@@ -10,10 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-
-
-
 // sync sequelize models to the database, then turn on the server
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
+  console.log(`Application listening on port' ${PORT}!`);
 });
+
+//README.md for further insight
+// Thank you!
