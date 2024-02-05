@@ -13,6 +13,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+
 // Get a single product, including associated Category and Tag data
 router.get("/:id", async (req, res) => {
   try {
